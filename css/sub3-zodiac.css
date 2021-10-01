@@ -1,0 +1,422 @@
+@charset "utf-8";
+/* ///// sub3 ///// */
+
+
+/*///top-banner///*/
+.topbn {    
+    background:url(../imgs/ban-sub3.jpg) no-repeat center;
+    background-size:cover;
+}
+.topbn h3 > div {display:inline-block;}
+
+/* ///// h3 effect ///// */
+.topbn h3 span {
+    display: inline-block;
+    text-shadow: 0 0 0 rgba(255,255,255,0.1);
+    animation: h3-effect 1s ease-in both reverse;
+}
+.topbn h3 span:nth-child(even){
+    animation-name: h3-effect-even;
+}
+.topbn h3 span:nth-child(1){ animation-delay:0.1s; }
+.topbn h3 span:nth-child(2){ animation-delay:0.2s; }
+.topbn h3 span:nth-child(3){ animation-delay:0.3s; }
+.topbn h3 span:nth-child(4){ animation-delay:0.4s; }
+.topbn h3 span:nth-child(5){ animation-delay:0.5s; }
+
+.topbn h3 span:nth-child(6){ animation-delay:0.8s; }
+.topbn h3 span:nth-child(7){ animation-delay:0.9s; }
+
+.topbn h3 span:nth-child(8){ animation-delay:1.2s; }
+.topbn h3 span:nth-child(9){ animation-delay:1.3s; }
+.topbn h3 span:nth-child(10){ animation-delay:1.4s; }
+
+.topbn h3 span:nth-child(11){ animation-delay:1.7s; }
+.topbn h3 span:nth-child(12){ animation-delay:1.8s; }
+.topbn h3 span:nth-child(13){ animation-delay:1.9s; }
+.topbn h3 span:nth-child(14){ animation-delay:2.0s; }
+.topbn h3 span:nth-child(15){ animation-delay:2.1s; }
+.topbn h3 span:nth-child(16){ animation-delay:2.2s; }
+@keyframes h3-effect {
+    25% {
+        text-shadow: 0 0 15px #fff;      
+    }
+    60% {
+    text-shadow: 0 0 40px #fff;      
+    }
+    to {
+    transform:        
+        translate3d(240px,-128px,0)
+        rotate(-40deg)
+        skewX(70deg)
+        scale(1.5);
+    text-shadow: 0 0 40px #fff;
+    opacity: 0;
+    }
+}
+@keyframes h3-effect-even { 
+    25% {
+        text-shadow: 0 0 15px #fff;      
+    }   
+    60% {
+    text-shadow: 0 0 40px #fff;       
+    }
+    to {
+    transform:            
+        translate3d(288px,-128px,0)
+        rotate(-40deg) 
+        skewX(-70deg)
+        scale(2);
+    text-shadow: 0 0 40px #fff;
+    opacity: 0;
+    }
+}
+
+/* /// 컨텐츠 타이틀 /// */
+#content { width:1300px; margin:0 auto; }
+#content .title {
+    position:relative; z-index:1;
+    width:100%; height:650px; margin-top:100px; padding-top:238px;
+    color:rgba(255,255,255,0.7);  text-align:center;
+    background:url(../imgs/title-sub3.jpg) no-repeat bottom;
+    background-size:100%;
+    transition:background 0.8s ease-in-out;
+}
+#content .title .dark-bg, #content .title .dark1-bg { 
+    position:absolute; left:0; top:0; z-index:-1;
+    width:100%; height:100%;        
+}
+#content .title .dark-bg li, #content .title .dark1-bg li { 
+    position:absolute; z-index:8;
+    width: 10%; opacity:0; background:rgba(0,0,0,0.4);    
+}
+#content .title .dark-bg li:nth-child(odd) { top:0; bottom:100%; }
+#content .title .dark-bg li:nth-child(even) { top:100%; bottom:0; }
+
+#content .title .dark-bg li:nth-child(1) { left:0; transition:all 0.3s ease-in; }
+#content .title .dark-bg li:nth-child(2) { left:10%; transition:all 0.3s ease-in 0.1s; }
+#content .title .dark-bg li:nth-child(3) { left:20%; transition:all 0.3s ease-in 0.2s; }
+#content .title .dark-bg li:nth-child(4) { left:30%; transition:all 0.3s ease-in 0.3s; }
+#content .title .dark-bg li:nth-child(5) { left:40%; transition:all 0.3s ease-in 0.4s; }    
+#content .title .dark-bg li:nth-child(6) { left:50%; transition:all 0.3s ease-in 0.5s; }
+#content .title .dark-bg li:nth-child(7) { left:60%; transition:all 0.3s ease-in 0.3s; }
+#content .title .dark-bg li:nth-child(8) { left:70%; transition:all 0.3s ease-in 0.2s; }
+#content .title .dark-bg li:nth-child(9) { left:80%; transition:all 0.3s ease-in 0.1s; }
+#content .title .dark-bg li:nth-child(10) { left:90%; transition:all 0.3s ease-in; }    
+
+#content .title .dark1-bg li:nth-child(odd) { top:100%; bottom:0; }
+#content .title .dark1-bg li:nth-child(even) { top:0; bottom:100%; }
+
+#content .title .dark1-bg li:nth-child(1) { left:0; transition:all 0.3s ease-in 0.2s; }
+#content .title .dark1-bg li:nth-child(2) { left:10%; transition:all 0.3s ease-in 0.3s; }
+#content .title .dark1-bg li:nth-child(3) { left:20%; transition:all 0.3s ease-in 0.4s; }
+#content .title .dark1-bg li:nth-child(4) { left:30%; transition:all 0.3s ease-in 0.5s; }
+#content .title .dark1-bg li:nth-child(5) { left:40%; transition:all 0.3s ease-in 0.6s; }    
+#content .title .dark1-bg li:nth-child(6) { left:50%; transition:all 0.3s ease-in 0.7s; }
+#content .title .dark1-bg li:nth-child(7) { left:60%; transition:all 0.3s ease-in 0.5s; }
+#content .title .dark1-bg li:nth-child(8) { left:70%; transition:all 0.3s ease-in 0.4s; }
+#content .title .dark1-bg li:nth-child(9) { left:80%; transition:all 0.3s ease-in 0.3s; }
+#content .title .dark1-bg li:nth-child(10) { left:90%; transition:all 0.3s ease-in 0.2s; }
+
+#content .title:hover .dark-bg li:nth-child(odd) { bottom:0; opacity:1; }
+#content .title:hover .dark-bg li:nth-child(even) { top:0; opacity:1; } 
+#content .title:hover .dark1-bg li:nth-child(odd) { top:0; opacity:1; }
+#content .title:hover .dark1-bg li:nth-child(even) { bottom:0; opacity:1; }   
+
+
+
+.title h5 { font-size:72px; }
+.title p { width:980px; margin:20px auto 0; font-size:18px; line-height:24px; }
+#content .title:hover { background-size:130%; }    
+
+/* /// zodiac 카드 /// */
+ul.zodiac-box { display:flex; justify-content:space-between; align-items:top; flex-wrap:wrap; }
+
+ul.zodiac-box .wrap {
+    position:relative;
+    width:400px; height:500px; margin-top:50px;
+    border-radius:25px;
+    perspective:800px;
+    transition:all 0.6s ease-in-out;
+}
+
+ul.zodiac-box .card-box {
+    position:absolute; width:100%; height:100%;
+    color:#fff; text-align:center;
+    border-radius:25px;
+    transform-style:preserve-3d;
+    transition:transform 0.8s ease-in, box-shadow 0.8s ease-in;
+}
+
+ul.zodiac-box .card-box > div { 
+    position:absolute; 
+    width:100%; height:100%; padding-top:220px; 
+    border-radius:25px;
+    backface-visibility:hidden;
+    overflow:hidden;
+}
+
+/* text */
+ul.zodiac-box p { padding-top:15px; }
+ul.zodiac-box p.name { font-family:gs-b; font-size:30px; }
+ul.zodiac-box p.date, ul.zodiac-box p.element { font-family:gs-m;  font-size:18px; }
+ul.zodiac-box p.date { color:#fc0; }
+ul.zodiac-box li .front p.date { color:#fff; }
+ul.zodiac-box p.element { color:#fc0; }
+ul.zodiac-box p.character span { display:block; font-size:15px; line-height:22px; }
+ul.zodiac-box p.back-deco { 
+    position:absolute; bottom:-37px; 
+    font-family:bro; font-size:134px; letter-spacing:-6px;
+    opacity:0.1; 
+}
+
+/* 카드 앞뒤 위치, 모양 */
+ul.zodiac-box .front { z-index:1; transform:rotate3D(0,1,0,180deg); animation: moveBg 30s linear alternate infinite forwards; }
+ul.zodiac-box .back { z-index:2; }
+@keyframes moveBg {
+    from { background-position-y:bottom; }
+    to { background-position-y:top; }
+}
+
+/* 그룹별 앞뒤 카드 배경 */
+ul.zodiac-box .back { background:url(../imgs/pattern.png); background-size:cover; }
+ul.zodiac-box .box-1 .front { background:url(../imgs/zodiac-box1-bg.jpg) no-repeat center bottom; }
+ul.zodiac-box .box-1 .back { background-color:#14183c; }
+ul.zodiac-box .box-2 .front { background:url(../imgs/zodiac-box2-bg.jpg) no-repeat center bottom; }
+ul.zodiac-box .box-2 .back { background-color:#253b72; }
+ul.zodiac-box .box-3 .front { background:url(../imgs/zodiac-box3-bg.jpg) no-repeat center; }
+ul.zodiac-box .box-3 .back { background-color:#245c88; }
+ul.zodiac-box .box-4 .front { background:url(../imgs/zodiac-box4-bg.jpg) no-repeat center bottom; }
+ul.zodiac-box .box-4 .back { background-color:#247b88; }
+
+/* 별자리 일러스트 */
+ul.zodiac-box .front > .img, ul.zodiac-box .back > .img { 
+    position:absolute; top:0; 
+    width:100%; height:55%;
+    opacity:0.85;
+}
+
+ul.zodiac-box li:nth-child(1) .front > .img, ul.zodiac-box li:nth-child(1) .back > .img {     
+    background:url(../imgs/capricorn.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(2) .front > .img, ul.zodiac-box li:nth-child(2) .back > .img {     
+    background:url(../imgs/aquarius.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(3) .front > .img, ul.zodiac-box li:nth-child(3) .back > .img {     
+    background:url(../imgs/pisces.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(4) .front > .img, ul.zodiac-box li:nth-child(4) .back > .img {     
+    background:url(../imgs/aries.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(5) .front > .img, ul.zodiac-box li:nth-child(5) .back > .img {     
+    background:url(../imgs/taurus.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(6) .front > .img, ul.zodiac-box li:nth-child(6) .back > .img {     
+    background:url(../imgs/gemini.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(7) .front > .img, ul.zodiac-box li:nth-child(7) .back > .img {     
+    background:url(../imgs/cancer.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(8) .front > .img, ul.zodiac-box li:nth-child(8) .back > .img {     
+    background:url(../imgs/leo.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(9) .front > .img, ul.zodiac-box li:nth-child(9) .back > .img {     
+    background:url(../imgs/virgo.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(10) .front > .img, ul.zodiac-box li:nth-child(10) .back > .img {     
+    background:url(../imgs/libra.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(11) .front > .img, ul.zodiac-box li:nth-child(11) .back > .img {     
+    background:url(../imgs/scorpio.png) no-repeat center; 
+}
+ul.zodiac-box li:nth-child(12) .front > .img, ul.zodiac-box li:nth-child(12) .back > .img {     
+    background:url(../imgs/sagittarius.png) no-repeat center; 
+}
+
+/* /// 카드 뒤집기 효과 ///  */
+ul.zodiac-box li:hover .card-box { transform:rotate3D(0,1,0,180deg) scale(1.07); box-shadow:0 25px 25px 10px rgba(11, 3, 37, 0.5); }
+
+/* /// FHD /// */
+@media screen and (min-width:1550px) {
+
+    
+    
+}
+
+
+/* /// HD /// */
+@media screen and (max-width:1549px) {
+
+    /* /// 컨텐츠 타이틀 /// */
+    #content { width:940px; margin:0 auto; }
+    #content .title {     
+        height:500px; margin-top:80px; padding-top:180px;        
+    }
+    .title h5 { font-size:60px; }
+    .title p { width:570px; margin:15px auto 0; }    
+    
+    /* /// zodiac 카드 /// */
+    ul.zodiac-box .wrap {        
+        width: 290px; height:360px; margin-top:35px;        
+        border-radius:20px;        
+    }
+
+    ul.zodiac-box .card-box > div { 
+        padding-top:105px; 
+        border-radius:20px;    
+    }
+
+    /* text */
+    ul.zodiac-box p.back-deco { 
+        bottom:-26px; 
+        font-size:96px; letter-spacing:-3px;        
+    }
+
+    ul.zodiac-box .card-box div > .img { height:75%; }
+    ul.zodiac-box .card-box .front > .img { opacity:0.7; }
+
+    /* /// 카드 뒤집기 효과 ///  */
+    ul.zodiac-box li:hover .card-box { box-shadow:0 15px 15px 5px rgba(11, 3, 37, 0.5); }
+
+}
+
+
+
+/* /// TABLET /// */
+@media screen and (max-width:1049px) {
+
+    /* common 수정 */
+    .tbox { top:193px; }    
+
+    /* /// 컨텐츠 타이틀 /// */
+    #content { width:100%; padding:0 30px; }
+    #content .title {     
+        height:400px; margin-top:40px; padding-top:143px;        
+    }
+    .title h5 { font-size:46px; }
+    .title p { width:470px; margin:20px auto 0; font-size:15px; line-height:18px; }    
+    
+    /* /// zodiac 카드 /// */
+    ul.zodiac-box .wrap {        
+        width: 48%; height:340px; margin-top:30px;        
+        border-radius:15px;
+    }    
+
+    ul.zodiac-box .card-box > div { 
+        padding-top:110px; 
+        border-radius:15px;    
+    }
+
+    ul.zodiac-box .card-box div > .img { height:80%; }
+    ul.zodiac-box .card-box .front > .img { opacity:0.6; }
+
+    /* text */
+    ul.zodiac-box p { padding-top:15px; }
+    ul.zodiac-box p.name { font-size:24px; }    
+    ul.zodiac-box p.character span { font-size:14px; line-height:18px; }    
+    ul.zodiac-box p.back-deco { 
+        bottom:-40px; left:50%;
+        font-size:110px; letter-spacing:-7px;        
+        transform:translateX(-51%);
+    }
+
+    /* /// 카드 뒤집기 효과 ///  */
+    ul.zodiac-box li:hover .card-box { transform:rotate3D(0,1,0,180deg) scale(1); }
+
+}
+
+
+
+/* /// MOBILE /// */
+@media screen and (max-width:649px) {
+
+    /* common 수정 */
+    .tbox { top:242px; }
+    .topbn h3 { width:300px; }
+    .topbn h3 > div { display:block; }
+
+    /* /// 컨텐츠 타이틀 /// */
+    #content { width:100%; padding:0; }
+    #content .title {     
+        height:300px; margin-top:20px; padding-top:76px;        
+    }
+
+    #content .title {       
+        background-size:cover;
+        transition:none;    
+    }
+    #content .title .dark-bg { display:none; }
+    #content .title:hover { background-size:cover; }
+
+    .title h5 { width:260px; margin:0 auto; font-size:36px; line-height:36px; }
+    .title p { width:330px; margin:15px auto 0; font-size:14px; line-height:18px; }
+
+    /* /// zodiac 카드 /// */
+    ul.zodiac-box { padding:0 20px; }
+    ul.zodiac-box .wrap {        
+        width: 100%; height:210px; margin-top:20px;
+        border-radius:0;
+    }    
+
+    ul.zodiac-box .card-box, ul.zodiac-box .card-box > div {         
+        border-radius:0;
+    }
+    ul.zodiac-box .card-box .front { padding:0; }
+    ul.zodiac-box .card-box .back { padding-top:65px; }
+
+    ul.zodiac-box .card-box div > .img { height:100%; }    
+    ul.zodiac-box .card-box .front > .img { opacity:0.4; }
+    ul.zodiac-box .card-box .back > .img { opacity:0.65; }
+
+    
+    /* text */
+    ul.zodiac-box .front { display:flex; justify-content:center; align-items:center; }    
+    ul.zodiac-box .front .mobile-right { padding-left:20px; }    
+    ul.zodiac-box .front p.name { font-size:18px; }
+    ul.zodiac-box .front p.name, ul.zodiac-box .front p.date { text-align:right; }
+    ul.zodiac-box .front p.date, ul.zodiac-box .front p.element { font-size:15px; }
+    ul.zodiac-box .front p.name { padding:0; }
+    ul.zodiac-box .front p.element, ul.zodiac-box p.character span { padding:0; text-align:left; }
+    ul.zodiac-box p.back-deco { 
+        bottom:-40px; left:50%;
+        font-size:110px; letter-spacing:-7px;        
+        transform:translateX(-51%);
+    }
+
+    /* 카드 뒤집기 효과 */
+    ul.zodiac-box li:hover .card-box { box-shadow:0 10px 10px 3px rgba(11, 3, 37, 0.5); }    
+}
+
+
+/* /// 320 디바이스 체크 /// */
+@media screen and (max-width:359px) {
+    /* common 수정 */
+    .tbox { top:143px; }
+    .topbn h3 { width:280px; }
+
+    /* /// 컨텐츠 타이틀 /// */    
+    #content .title {     
+        height:300px; margin-top:20px; padding-top:65px;        
+    }
+    .title h5 { width:260px; font-size:32px; line-height:32px; }
+    .title p { width:260px; font-size:13px; line-height:16px; }
+
+    /* /// zodiac 카드 /// */
+    ul.zodiac-box { padding:0; }
+
+    /* text */        
+    ul.zodiac-box .front p.name { font-size:16px; }
+    ul.zodiac-box .front p.name, ul.zodiac-box .front p.date { text-align:right; }
+    ul.zodiac-box .front p.element { font-size:14px; }
+    ul.zodiac-box .front p.date, ul.zodiac-box p.character span { font-size:13px;}        
+    ul.zodiac-box p.back-deco { 
+        bottom:-40px; left:50%;
+        font-size:110px; letter-spacing:-7px;        
+        transform:translateX(-51%);
+    }    
+}
+
+@media screen and (max-width:319px) {
+    /* common 수정 */
+    .tbox { top:88px; }
+}

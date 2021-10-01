@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* ///// menu-sub ///// */
+
+/* /// 메뉴판-공통 /// */
+#menu-canvas {    
+    display:none;
+    position:absolute; z-index:999;
+    width:100%; height:100%; 
+    background:#e2e2e2; overflow:hidden;       
+}
+#menu-canvas .menu-bg { float:left;}
+/*#menu-canvas::after { content:''; clear:both;}*/
+#menu-canvas a, #menu-canvas span { color:#333; text-transform:uppercase; }
+
+/* 메뉴판 - 왼쪽 */
+.menu-logo { display:none; }
+.menu-bg {    
+    position:relative;
+    width:30%; max-width:650px; height:100%; 
+    background:url(../imgs/menu-bg.jpg) no-repeat left center; 
+    animation:menuBg 20s linear alternate infinite;
+}
+@keyframes menuBg {
+    from { background-position-x:left; }
+    to { background-position-x:right; }
+}
+.menu-bg > a { position:absolute; top:25px; left:30px; }
+
+/* 메뉴판-오른쪽 */
+.menu-txt { float:right; position:relative; width:70%; height:100%; margin:0 auto; }
+/*배경 애니메이션*/
+.zodiac-circle { 
+    position:absolute; right:-453px; bottom:-447px;
+    width:906px; height:894px;
+    background:url(../imgs/menu-bg2.png) no-repeat center ;
+    animation: rotate-circle 40s linear infinite;
+}
+@keyframes rotate-circle {
+    100% { transform:rotate(360deg); }
+}
+/* close btn */
+.close { float:right; position:relative; width:24px; height:24px; margin:25px 60px 0 0; cursor:pointer; }
+.close > span { position:absolute; width:30px; height:3px; background:#333; transition: all 0.4s ease-in; }
+.close > span:nth-child(1) { transform:translate(-2px, 12px) rotate(-45deg); }
+.close > span:nth-child(2) { transform:translate(-2px, 12px) rotate(45deg); }
+.close:hover > span:nth-child(1) { transform:translate(0, 10px) rotate(0); }
+.close:hover > span:nth-child(2) { transform:translate(0, 10px) rotate(0); }
+/* 탑메뉴 */
+.top-menu { float:right; margin:35px 40px 0 0; }
+.top-menu li a { padding:0 15px; font-family:pl-b; font-size:12px; line-height:8px; transition: color 0.2s ease-in; }
+#menu-canvas .top-menu li a:hover { color:#de8716; }
+.top-menu li:nth-child(1) a { border-right: 1px solid #8a8a8a; }
+
+/* 메인메뉴 부모박스*/
+.main-menu { 
+    position:absolute; top:20%; left:50%;    
+    width:1030px; margin-left:-515px;    
+}
+/* bar */
+.main-menu  div { width:1px; height:30px; margin:35px auto; background:#999; }
+/* 아이콘 */
+.main-menu > li { float:left; position:relative; margin:0 33px; }
+.main-menu > li > i { display:block; padding:35px 0; color:#333; font-size:32px; text-align:center; transition: color 0.2s ease-in; }
+/*메인메뉴 text*/
+#menu-canvas .main-menu > li > span { padding:0 25px; font-family:gs-b; font-size:24px; cursor:default; }
+/*서브메뉴*/
+.sub-menu { position:absolute; width:100%; }
+.sub-menu li { float:none; }
+.sub-menu li a { padding:16px 10px; font-size:18px; text-align:center; transition: margin 0.2s ease; }
+#menu-canvas .sub-menu li a:hover { margin-left:20px; color:#de8716; }
+.main-menu li:hover i { color:#de8716; }
+/* menu-sns */
+.menu-sns { display:none; }
+
+
+
+/* ///// FHD ///// */
+@media screen and (min-width:1550px) {
+        
+}
+
+
+
+/* /// HD /// */
+@media screen and (max-width:1549px) {    
+    
+    /* /// 메뉴판 /// */    
+    /* 왼쪽 */
+    .menu-logo { display:block; position:absolute; top:25px; left:30px; }
+    .menu-bg { display:none; }
+    /* 오른쪽 */
+    .menu-txt { float:none; width:100%; }   
+    .close { margin:25px 40px 0 0;}
+}
+
+/* /// TABLET /// */
+@media screen and (max-width:1049px) {
+    
+    /* /// 메뉴판 /// */
+    .memu-sns { display:none; }
+    /* 오른쪽 */
+    /* 메인메뉴 부모박스*/
+    .main-menu {
+        display:flex; justify-content:space-between; align-items:top; flex-wrap:wrap;        
+        width:600px; margin-left:-300px;    
+    }    
+    .main-menu > li { float:none; width:250px; height:360px; margin:0 25px;  }
+    .main-menu > li:nth-child(3), .main-menu > li:nth-child(4) { height:190px; margin-top:25px; }
+    /* bar */
+    .main-menu  div { height:20px; margin:10px auto;  }    
+    /* 아이콘 */
+    .main-menu > li > i { padding:0; }
+    /*메인메뉴 text*/
+    #menu-canvas .main-menu > li > span { display:block; width:100%; padding:15px 0; text-align:center; }
+    /*서브메뉴*/
+    .sub-menu { display:block; margin-top:5px; }    
+    .sub-menu li a { font-size:15px; }
+    #menu-canvas .sub-menu li a:hover { margin-left:0; }
+    .main-menu li:hover i { color:#333; }    
+    .close { margin:20px 45px 0 0;}
+}
+
+
+/* /// iPad Pro /// */
+@media screen and (max-width:1024px) {    
+    
+     /* 메인메뉴 부모박스*/
+     .main-menu { top:20%; }
+}
+
+/* /// MOBILE /// */
+@media screen and (max-width:649px) {
+            
+    /* /// 메뉴판 /// */
+    /* 왼쪽 */
+    .menu-logo { display:none; }
+    /* 오른쪽 */
+    /* close btn */
+    .close { margin:20px 20px 0 0; }
+    
+    /* 탑메뉴 */
+    .top-menu { margin:28px 40px 0 0; }
+    .top-menu li a { padding:0 20px; font-size:14px; line-height:9px; }
+
+    /*배경 애니메이션*/
+    .zodiac-circle { right:-300px; bottom:-296px;  width:600px; height:592px; background-size:cover; }
+
+    /* 메인메뉴 부모박스*/
+    .main-menu {        
+        top:13%;  
+        width:300px; margin-left:-150px;    
+    }    
+    .main-menu > li { width:100%; height:fit-content; margin-top:10px; }
+    .main-menu > li:nth-child(3), .main-menu > li:nth-child(4) { height:fit-content; margin-top:10px;}
+    /* bar */
+    .main-menu  div { display:none; }
+    /* 아이콘 */
+    .main-menu > li > i { display:none; }
+    /* 메인메뉴 text */
+    #menu-canvas .main-menu > li > span { font-size:20px; }
+    /* 서브메뉴 */
+    .sub-menu { display:none; position:relative; padding: 0; }
+    /* menu-sns */
+    .menu-sns { display:block; position:absolute; left:50%; bottom:30px; width:237px; margin-left:-121px; }
+    .menu-sns li { height:40px; padding-right:30px; }
+    .menu-sns li:last-child { padding-right:0; }
+    #menu-canvas .menu-sns li a { font-size:42px; color:#5969a0; }    
+    #menu-canvas .menu-sns li a:hover { color:#de8716; }
+    .close { margin:20px 35px 0 0;}
+}
+
+
+@media screen and (max-width:540px) {    
+    
+     /* 메인메뉴 부모박스*/
+     .main-menu { top:20%; }     
+}
+
+@media screen and (max-width:375px) {
+        
+     /* 메인메뉴 부모박스*/
+     .main-menu { top:18%; }
+}
+
+@media screen and (max-width:365px) {
+   
+     /* 메인메뉴 부모박스*/
+     .main-menu { top:15%; }
+}
+
+
+
+/* /// 320 디바이스 체크 /// */
+@media screen and (max-width:330px) {    
+
+     /* 메인메뉴 부모박스*/
+     .main-menu { top:13%; }
+     /* 메인메뉴 text */
+    #menu-canvas .main-menu > li > span { padding:10px 0; font-size:16px; }    
+    /* menu-sns */
+    .menu-sns { bottom:20px; }    
+}
+
+/* /// 갤럭시폴드???? /// */
+@media screen and (max-width:290px) {
+    
+}

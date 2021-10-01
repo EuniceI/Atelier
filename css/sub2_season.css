@@ -1,0 +1,918 @@
+@charset "utf-8";
+/* ///// common-sub ///// */
+.topbn {
+    background:url(../imgs/ban-sub2.jpg) no-repeat center;
+    background-size:cover;
+}
+#content { margin:0 auto; padding:0}
+.wrap .click1  {color:#0054a6; border-color: #0054a6;}
+
+/* ///// h3 effect ///// */
+.topbn h3 span {
+  display: inline-block;
+  text-shadow: 0 0 0 rgba(255,255,255,0.1);
+  animation: h3-effect 1s ease-out both reverse;
+}
+.topbn h3 span:nth-child(even){
+  animation-name: h3-effect-even;
+}
+.topbn h3 span:nth-child(1){ animation-delay:0.1s; }
+.topbn h3 span:nth-child(2){ animation-delay:0.2s; }
+.topbn h3 span:nth-child(3){ animation-delay:0.3s; }
+.topbn h3 span:nth-child(4){ animation-delay:0.4s; }
+.topbn h3 span:nth-child(5){ animation-delay:0.5s; }
+.topbn h3 span:nth-child(6){ animation-delay:0.6s; }
+.topbn h3 span:nth-child(7){ animation-delay:0.7s; }
+.topbn h3 span:nth-child(8){ animation-delay:0.8s; }
+
+.topbn h3 span:nth-child(9){ animation-delay:1.1s; }
+.topbn h3 span:nth-child(10){ animation-delay:1.2s; }
+.topbn h3 span:nth-child(11){ animation-delay:1.3s; }
+.topbn h3 span:nth-child(12){ animation-delay:1.4s; }
+.topbn h3 span:nth-child(13){ animation-delay:1.5s; }
+.topbn h3 span:nth-child(14){ animation-delay:1.6s; }
+.topbn h3 span:nth-child(15){ animation-delay:1.7s; }
+.topbn h3 span:nth-child(16){ animation-delay:1.8s; }
+.topbn h3 span:nth-child(17){ animation-delay:1.9s; }
+.topbn h3 span:nth-child(18){ animation-delay:2.0s; }
+.topbn h3 span:nth-child(19){ animation-delay:2.1s; }
+.topbn h3 span:nth-child(20){ animation-delay:2.2s; }
+.topbn h3 span:nth-child(21){ animation-delay:2.3s; }
+.topbn h3 span:nth-child(22){ animation-delay:2.4s; }
+
+@keyframes h3-effect {
+  25% {
+      text-shadow: 0 0 15px #fff;      
+    }
+  60% {
+    text-shadow: 0 0 40px #fff;      
+  }
+  to {
+    transform:        
+      translate3d(240px,-128px,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 40px #fff;
+    opacity: 0;
+  }
+}
+@keyframes h3-effect-even { 
+  25% {
+      text-shadow: 0 0 15px #fff;      
+    }   
+  60% {
+    text-shadow: 0 0 40px #fff;       
+  }
+  to {
+    transform:            
+      translate3d(288px,-128px,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 40px #fff;
+    opacity: 0;
+  }
+}
+
+/* common 수정 */
+.topbn h3 > div { display:inline-block; }
+.wrap a { text-transform:uppercase; }
+
+/* ////////// FHD ////////// */
+@media screen and (min-width:1550px) {
+
+
+    #content { width:1300px; }
+    
+    .wrap {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%; height:80px; margin-top:100px;
+    }
+
+    .wrap a {
+        display:flex;
+        justify-content: center;
+        align-items: center;width:25%; height:100%;
+        font-family:'pl-b'; font-size:18px; color:#999;
+        border:1px solid #ccc;
+    }
+    .first h2 { 
+        margin-top:90px;
+        text-align: center;
+        color:#333; font-size:72px;
+        line-height:62px; 
+    }
+    .first p {
+        width:900px; height:30px; margin:40px auto; padding:0;
+        font-family:'gs-l'; font-size: 18px; text-align: center;
+    }
+    figure.imgfx {
+        position: relative;
+        overflow: hidden;
+        width: 100%; max-height: 600px;
+        color: #fff; text-align: center; font-size: 16px;
+      }
+      figure.imgfx *{transition: all 0.3s ease;}
+      figure.imgfx img {
+        max-width: 100%;
+      }
+      figure.imgfx:after,
+      figure.imgfx:before,
+      figure.imgfx figcaption:after,
+      figure.imgfx figcaption:before {
+        position: absolute; left: 50%; right: 50%;
+        height: 25%;
+        content: '';
+        background: #000;
+        opacity: 0;
+        transition: all 0.3s steps(6);
+        z-index: 1;
+      }
+      figure.imgfx:before {
+        top: 0; transition-delay: 0;
+      }
+      figure.imgfx:after {
+        top: 25%; transition-delay: 0.1s;
+      }
+      figure.imgfx figcaption:before {
+        top: 50%; transition-delay: 0.2s; z-index: -1;
+      }
+      figure.imgfx figcaption:after {
+        top: 75%; transition-delay: 0.3s; z-index: -1;
+      }
+      figure.imgfx figcaption {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        padding: 30px; z-index: 2;
+      }
+      figure.imgfx h2, .imgfx p { width: 50%; margin: 0 auto; opacity: 0; line-height:30px;}
+      figure.imgfx h2 {
+        margin: 220px auto 20px;
+        font-family:'tm-b'; font-size: 30px; color: #fff;
+        text-transform: uppercase;
+      }
+      figure.imgfx:hover:after,
+      figure.imgfx.hover:after,
+      figure.imgfx:hover:before,
+      figure.imgfx.hover:before,
+      figure.imgfx:hover figcaption:after,
+      figure.imgfx.hover figcaption:after,
+      figure.imgfx:hover figcaption:before,
+      figure.imgfx.hover figcaption:before {
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+      }
+      figure.imgfx:hover figcaption h2{
+        opacity: 1; transition-delay: 0.3s;
+      }
+      figure.imgfx:hover figcaption p{
+        opacity: 0.7; transition-delay: 0.4s;
+      }
+
+    .second {
+        padding:100px; background:#f5f5f5;
+    }
+    .second h3, .third h3 {font-size: 48px; line-height: 38px;}
+    .second p {width:1110px; margin-top:40px;padding:0; font-size:15px;line-height: 22px;}
+
+    .third {
+        background:#e5e5e5;
+    }
+    .springCircle, .summerCircle, .autumnCircle, .winterCircle {
+        float:left; border-radius:50%; width:370px; height:370px; 
+        margin:40px 50px 40px 40px;
+    }
+    .third >.springCircle {
+        background:url(../imgs/sub-spring.jpg)center;
+    }
+    .third >.summerCircle {
+        background:url(../imgs/sub2-summer2.jpg) center;
+    }
+    .third >.autumnCircle {
+        background:url(../imgs/sub2-autumn.jpg) center;
+    }
+    .third >.winterCircle {
+        background:url(../imgs/sub2-winter.jpg) center;
+    }
+    
+    .third .wrapper  {
+        float:left; width:730px; 
+        margin-top:110px;
+    }
+    .third p {width:100%; height:100%; margin-top:40px; padding:0;font-size:15px;line-height: 22px;}   
+    
+}
+
+
+
+/* ////////// HD ////////// */
+@media screen and (min-width:1050px) and (max-width:1549px) {
+
+
+    #content { width:940px; }
+    .wrap {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%; height:80px; margin:60px 0 0;;
+    }
+    .wrap a {
+        display:flex;
+        justify-content: center;
+        align-items: center; width:25%; height:100%;
+        font-family:'pl-b'; font-size:18px; color:#999;
+        border:1px solid #ccc;
+    }
+    .first h2 { 
+        margin-top:80px;
+        text-align: center;
+        color:#333; font-size:60px;
+        line-height:52px; 
+    }
+    .first p {
+        width:900px;margin:30px auto; padding:0;
+        font-family:'gs-l'; font-size: 18px; text-align: center;
+    }
+    figure.imgfx {
+        position: relative;
+        overflow: hidden;
+        width: 100%; max-height: 400px;
+        color: #fff; text-align: center; font-size: 16px;
+      }
+      figure.imgfx *{transition: all 0.3s ease;}
+      figure.imgfx img {
+        max-width: 100%;
+      }
+      figure.imgfx:after,
+      figure.imgfx:before,
+      figure.imgfx figcaption:after,
+      figure.imgfx figcaption:before {
+        position: absolute; left: 50%; right: 50%;
+        height: 25%;
+        content: '';
+        background: #000;
+        opacity: 0;
+        transition: all 0.3s steps(6);
+        z-index: 1;
+      }
+      figure.imgfx:before {
+        top: 0; transition-delay: 0;
+      }
+      figure.imgfx:after {
+        top: 25%; transition-delay: 0.1s;
+      }
+      figure.imgfx figcaption:before {
+        top: 50%; transition-delay: 0.2s; z-index: -1;
+      }
+      figure.imgfx figcaption:after {
+        top: 75%; transition-delay: 0.3s; z-index: -1;
+      }
+      figure.imgfx figcaption {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        padding: 30px; z-index: 2;
+      }
+      figure.imgfx h2, .imgfx p { width: 50%; margin: 0 auto; opacity: 0; line-height:30px;}
+      figure.imgfx h2 {
+        margin: 120px auto 20px;
+        font-family:'tm-b'; font-size: 30px; color: #fff;
+        text-transform: uppercase;
+      }
+      figure.imgfx:hover:after,
+      figure.imgfx.hover:after,
+      figure.imgfx:hover:before,
+      figure.imgfx.hover:before,
+      figure.imgfx:hover figcaption:after,
+      figure.imgfx.hover figcaption:after,
+      figure.imgfx:hover figcaption:before,
+      figure.imgfx.hover figcaption:before {
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+      }
+      figure.imgfx:hover figcaption h2{
+        opacity: 1; transition-delay: 0.3s;
+      }
+      figure.imgfx:hover figcaption p{
+        opacity: 0.7; transition-delay: 0.4s;
+      }
+
+    .second {
+        width:100%; padding:80px 30px; background:#f5f5f5;
+    }
+    .second h3, .third h3 {padding: 0;font-size: 36px; line-height: 36px; line-height: 22px;}
+    .second p, .third p {font-size:15px; line-height:24px; }
+    .second p {width:880px; margin-top:40px; padding:0; }
+
+    .third {
+        width:100%; background:#e5e5e5;
+    }
+    .springCircle, .summerCircle, .autumnCircle, .winterCircle {
+        float:left; border-radius:50%; width:300px; height:300px; 
+        margin:30px 40px 30px 30px;
+    }
+    .third >.springCircle {
+        background:url(../imgs/sub-spring.jpg)center;
+    
+    }
+    .third >.summerCircle {
+        background:url(../imgs/sub2-summer2.jpg) center;
+        
+    }
+    .third >.autumnCircle {
+        background:url(../imgs/sub2-autumn.jpg) center;
+        
+    }
+    .third >.winterCircle {
+        background:url(../imgs/sub2-winter.jpg) center;
+        
+    }
+    
+    .third .wrapper  {
+        float:left; width:540px;  
+        margin-top:70px;
+    }
+    .third p {width:100%; margin-top:40px; }    
+}
+
+
+
+
+
+/* /// TABLET /// */
+@media screen and (min-width:650px) and (max-width:1049px) {
+
+    /* common 수정 */
+    .topbn h3 > div { display:block; }
+    
+
+    #content {
+        width:93%; 
+    }
+     
+    .wrap {
+        width:100%; height:120px; margin:40px 0 0;;
+    }
+    .wrap a {
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+        float:left;
+        width:50%; height:50%;
+        font-family:'pl-b'; font-size:16px; color:#999;
+        border:1px solid #ccc;
+    }
+    .first h2 { 
+        margin-top:50px;
+        text-align: center;
+        color:#333; font-size:42px;
+        line-height:32px; 
+    }
+    .first p {
+        margin:35px auto; padding:0;
+        font-family:'gs-l'; font-size: 15px; text-align: center;
+        color:#575757;
+    }
+    figure.imgfx {
+        position: relative;
+        overflow: hidden;
+        width: 100%; height: 340px;
+        color: #fff; text-align: center; font-size: 16px;
+      }
+      figure.imgfx *{transition: all 0.3s ease;}
+      figure.imgfx img {
+        width: 100%; height: 340px; object-fit: cover;
+      }
+      figure.imgfx:after,
+      figure.imgfx:before,
+      figure.imgfx figcaption:after,
+      figure.imgfx figcaption:before {
+        position: absolute; left: 50%; right: 50%;
+        height: 25%;
+        content: '';
+        background: #000;
+        opacity: 0;
+        transition: all 0.3s steps(6);
+        z-index: 1;
+      }
+      figure.imgfx:before {
+        top: 0; transition-delay: 0;
+      }
+      figure.imgfx:after {
+        top: 25%; transition-delay: 0.1s;
+      }
+      figure.imgfx figcaption:before {
+        top: 50%; transition-delay: 0.2s; z-index: -1;
+      }
+      figure.imgfx figcaption:after {
+        top: 75%; transition-delay: 0.3s; z-index: -1;
+      }
+      figure.imgfx figcaption {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        padding: 30px; z-index: 2;
+      }
+      figure.imgfx h2, .imgfx p { width: 80%; margin: 0 auto; opacity: 0; line-height:30px; color: #fff;}
+      figure.imgfx h2 {
+        margin: 90px auto 20px;
+        font-family:'tm-b'; font-size: 24px; ;
+        text-transform: uppercase;
+      }
+      figure.imgfx:hover:after,
+      figure.imgfx.hover:after,
+      figure.imgfx:hover:before,
+      figure.imgfx.hover:before,
+      figure.imgfx:hover figcaption:after,
+      figure.imgfx.hover figcaption:after,
+      figure.imgfx:hover figcaption:before,
+      figure.imgfx.hover figcaption:before {
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+      }
+      figure.imgfx:hover figcaption h2{
+        opacity: 1; transition-delay: 0.3s;
+      }
+      figure.imgfx:hover figcaption p{
+        opacity: 0.7;transition-delay: 0.4s;
+      }
+
+
+    .second { padding:50px 0;
+        background:#f5f5f5; 
+    }
+    .second h3, .third h3 { width:560px; margin: 0 auto;
+        
+        font-size: 36px; line-height: 36px; color:#333; line-height: 22px;
+    }
+    .second p, .third p {width:560px; margin: 0 auto;
+        font-size:15px; line-height:24px; color:#575757;
+    }
+    .second p {width:560px; padding-top:20px;}
+
+    .third {
+        padding:50px 0;
+        background:#e5e5e5;
+    }
+    .springCircle, .summerCircle, .autumnCircle, .winterCircle {
+        width:560px; height:300px; 
+        margin: 0 auto; ;
+    }
+    article .third >.springCircle {
+        background: url(../imgs/sub2-seasons_mobile-spring.jpg) center;
+        background-size: cover;
+        }
+    article .third >.summerCircle {
+        background: url(../imgs/sub2-seasons-mobile-summer.jpg)center;
+        background-size: cover;
+        }
+    article .third >.autumnCircle {
+        background: url(../imgs/sub2-seasons-mobile-autumn.jpg)center;
+        background-size: cover;
+        }
+    article .third >.winterCircle {
+        background:  url(../imgs/sub2-seasons-mobile-winter.jpg)center;
+        background-size: cover;
+    }
+    
+    .third .wrapper  {
+        width:560px; padding-top: 30px;
+        margin:0 auto;
+    }
+    .third p {width:100%; height:100%; margin-top:20px; padding:0;}   
+    
+
+}
+
+
+/* /// MOBILE /// */
+@media screen and (min-width:360px) and (max-width:649px) {
+    #content {
+        width:94%; 
+    }
+    .wrap {
+        width:100%; height:100px; margin:20px 0 0;
+        
+    }
+    .wrap a {
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+        float:left;
+        width:50%; height:50%;
+        font-family:'pl-b'; font-size:14px; color:#999;
+        border:1px solid #ccc;
+    }
+    .first h2 { 
+        width:340px; 
+        margin:40px auto 0;
+        text-align: center;
+        color:#333; font-size:36px; 
+        line-height:30px; 
+    }
+    .first p {
+        text-align:center;
+        width:340px; height:35px; margin:22px auto; padding:0;
+        font-family:'gs-l'; font-size: 15px; text-align: center;
+        color:#575757;
+    }
+    figure.imgfx {
+        position: relative;
+        overflow: hidden;
+        width: 100%; height: 300px;
+        color: #fff; text-align: center; font-size: 16px;
+      }
+      figure.imgfx *{transition: all 0.3s ease;}
+      figure.imgfx img {
+        width: 100%; height: 300px; object-fit: cover;
+      }
+      figure.imgfx:after,
+      figure.imgfx:before,
+      figure.imgfx figcaption:after,
+      figure.imgfx figcaption:before {
+        position: absolute; left: 50%; right: 50%;
+        height: 25%;
+        content: '';
+        background: #000;
+        opacity: 0;
+        transition: all 0.3s steps(6);
+        z-index: 1;
+      }
+      figure.imgfx:before {
+        top: 0; transition-delay: 0;
+      }
+      figure.imgfx:after {
+        top: 25%; transition-delay: 0.1s;
+      }
+      figure.imgfx figcaption:before {
+        top: 50%; transition-delay: 0.2s; z-index: -1;
+      }
+      figure.imgfx figcaption:after {
+        top: 75%; transition-delay: 0.3s; z-index: -1;
+      }
+      figure.imgfx figcaption {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        padding: 30px; z-index: 2;
+      }
+      figure.imgfx h2, .imgfx p { width: 80%; margin: 0 auto; opacity: 0; line-height:20px; color: #fff;}
+      figure.imgfx h2 {
+        margin: 60px auto 10px;
+        font-family:'tm-b'; font-size: 24px; ;
+        text-transform: uppercase;
+      }
+      figure.imgfx:hover:after,
+      figure.imgfx.hover:after,
+      figure.imgfx:hover:before,
+      figure.imgfx.hover:before,
+      figure.imgfx:hover figcaption:after,
+      figure.imgfx.hover figcaption:after,
+      figure.imgfx:hover figcaption:before,
+      figure.imgfx.hover figcaption:before {
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+      }
+      figure.imgfx:hover figcaption h2{
+        opacity: 1; transition-delay: 0.3s;
+      }
+      figure.imgfx:hover figcaption p{
+        opacity: 0.7;transition-delay: 0.4s;
+      }
+
+
+    .second {
+        background:#f5f5f5;
+    }
+    .second h3, .third h3 {
+        width:330px; margin:0 auto; padding-top: 40px;  
+        font-size: 24px; line-height: 24px; color:#333; 
+        line-height: 22px; 
+    }
+    .second p, .third p {
+        margin:0 auto;  
+        font-size:14px; line-height:18px; color:#575757;
+    }
+    .second p {width:330px; margin-top:20px; padding-bottom: 40px;}
+
+    .third {
+        background:#e5e5e5;
+    }
+
+    .springCircle, .summerCircle, .autumnCircle, .winterCircle {
+        width:100%; height:300px; 
+    }
+    article .third >.springCircle {
+        background: url(../imgs/sub2-seasons_mobile-spring.jpg) center;
+        background-size: cover;
+    }
+    article .third >.summerCircle {
+        background: url(../imgs/sub2-seasons-mobile-summer.jpg)center;
+        background-size: cover;
+    }
+    article .third >.autumnCircle {
+        background: url(../imgs/sub2-seasons-mobile-autumn.jpg)center;
+        background-size: cover;
+    }
+    article .third >.winterCircle {
+        background:  url(../imgs/sub2-seasons-mobile-winter.jpg)center;
+        background-size: cover;
+    }
+    
+    .third .wrapper  {
+        width:330px; 
+        margin:0 auto; 
+    }
+    .third p { width:100%; margin-top:20px; padding-bottom: 40px;}   
+}
+
+
+/* /// 320 디바이스 체크 /// */
+
+
+@media screen and (min-width:320px) and (max-width:359px){
+
+    /* common 수정 */
+    .tbox { top:143px; }
+    .topbn h3 { width:316px; }
+
+    #content { width:94%; }
+    .wrap {
+        width:100%; height:100px; margin:20px 0 0;
+        
+    }
+    .wrap a {
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+        float:left;
+        width:50%; height:50%;
+        font-family:'pl-b'; font-size:14px; color:#999;
+        border:1px solid #ccc;
+    }
+    .first h2 { 
+        width:300px; 
+        margin:40px auto 0;
+        text-align: center;
+        color:#333; font-size:32px; 
+        line-height:30px; 
+    }
+    .first p {
+        text-align:center;
+        width:300px;margin:22px auto; padding:0;
+        font-family:'gs-l'; font-size: 15px; text-align: center;
+        color:#575757;
+    }
+    figure.imgfx {
+        position: relative;
+        overflow: hidden;
+        width: 100%; height: 300px;
+        color: #fff; text-align: center; font-size: 16px;
+      }
+      figure.imgfx *{transition: all 0.3s ease;}
+      figure.imgfx img {
+        width: 100%; height: 300px; object-fit: cover;
+      }
+      figure.imgfx:after,
+      figure.imgfx:before,
+      figure.imgfx figcaption:after,
+      figure.imgfx figcaption:before {
+        position: absolute; left: 50%; right: 50%;
+        height: 25%;
+        content: '';
+        background: #000;
+        opacity: 0;
+        transition: all 0.3s steps(6);
+        z-index: 1;
+      }
+      figure.imgfx:before {
+        top: 0; transition-delay: 0;
+      }
+      figure.imgfx:after {
+        top: 25%; transition-delay: 0.1s;
+      }
+      figure.imgfx figcaption:before {
+        top: 50%; transition-delay: 0.2s; z-index: -1;
+      }
+      figure.imgfx figcaption:after {
+        top: 75%; transition-delay: 0.3s; z-index: -1;
+      }
+      figure.imgfx figcaption {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        padding: 30px; z-index: 2;
+      }
+      figure.imgfx h2, .imgfx p { width: 80%; margin: 0 auto; opacity: 0; line-height:20px; color: #fff;}
+      figure.imgfx h2 {
+        margin: 60px auto 10px;
+        font-family:'tm-b'; font-size: 24px; ;
+        text-transform: uppercase;
+      }
+      figure.imgfx:hover:after,
+      figure.imgfx.hover:after,
+      figure.imgfx:hover:before,
+      figure.imgfx.hover:before,
+      figure.imgfx:hover figcaption:after,
+      figure.imgfx.hover figcaption:after,
+      figure.imgfx:hover figcaption:before,
+      figure.imgfx.hover figcaption:before {
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+      }
+      figure.imgfx:hover figcaption h2{
+        opacity: 1; transition-delay: 0.3s;
+      }
+      figure.imgfx:hover figcaption p{
+        opacity: 0.7;transition-delay: 0.4s;
+      }
+
+
+    .second {
+        background:#f5f5f5;
+    }
+    .second h3, .third h3 {
+        width:280px; margin:0 auto; padding-top: 40px;  
+        font-size: 24px; line-height: 24px; color:#333; 
+        line-height: 22px; 
+    }
+    .second p, .third p {
+        margin:0 auto;  
+        font-size:14px; line-height:18px; color:#575757;
+    }
+    .second p {width:280px; margin-top:20px; padding-bottom: 40px;}
+
+    .third {
+        background:#e5e5e5;
+    }
+
+    .springCircle, .summerCircle, .autumnCircle, .winterCircle {
+        width:100%; height:300px; 
+    }
+    article .third >.springCircle {
+        background: url(../imgs/sub2-seasons_mobile-spring.jpg) center;
+        background-size: cover;
+    }
+    article .third >.summerCircle {
+        background: url(../imgs/sub2-seasons-mobile-summer.jpg)center;
+        background-size: cover;
+    }
+    article .third >.autumnCircle {
+        background: url(../imgs/sub2-seasons-mobile-autumn.jpg)center;
+        background-size: cover;
+    }
+    article .third >.winterCircle {
+        background:  url(../imgs/sub2-seasons-mobile-winter.jpg)center;
+        background-size: cover;
+    }
+    
+    .third .wrapper  {
+        width:280px; 
+        margin:0 auto; 
+    }
+    .third p { width:100%; margin-top:20px; padding-bottom: 40px;}   
+}
+
+@media screen and (max-width:319px) {
+    #content {
+        width:94%; ;
+    }
+    .wrap {
+        width:100%; height:100px; margin:20px 0 0;
+        
+    }
+    .wrap a {
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+        float:left;
+        width:50%; height:50%;
+        font-family:pl-b; font-size:14px; color:#999;
+        border:1px solid #ccc;
+    }
+    .first h2 { 
+        width:260px; 
+        margin:40px auto 0;
+        text-align: center;
+        color:#333; font-size:30px; 
+        line-height:30px; 
+    }
+    .first p {
+        text-align:center;
+        width:260px; margin:22px auto; 
+        font-family:'gs-l'; font-size: 15px; text-align: center;
+        color:#575757;
+    }
+    figure.imgfx {
+        position: relative;
+        overflow: hidden;
+        width: 100%; height: 300px;
+        color: #fff; text-align: center; font-size: 16px;
+      }
+      figure.imgfx *{transition: all 0.3s ease;}
+      figure.imgfx img {
+        width: 100%; height: 300px; object-fit: cover;
+      }
+      figure.imgfx:after,
+      figure.imgfx:before,
+      figure.imgfx figcaption:after,
+      figure.imgfx figcaption:before {
+        position: absolute; left: 50%; right: 50%;
+        height: 25%;
+        content: '';
+        background: #000;
+        opacity: 0;
+        transition: all 0.3s steps(6);
+        z-index: 1;
+      }
+      figure.imgfx:before {
+        top: 0; transition-delay: 0;
+      }
+      figure.imgfx:after {
+        top: 25%; transition-delay: 0.1s;
+      }
+      figure.imgfx figcaption:before {
+        top: 50%; transition-delay: 0.2s; z-index: -1;
+      }
+      figure.imgfx figcaption:after {
+        top: 75%; transition-delay: 0.3s; z-index: -1;
+      }
+      figure.imgfx figcaption {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 2;
+      }
+      figure.imgfx h2, .imgfx p { width: 260px; margin: 0 auto; opacity: 0; line-height:20px; color: #fff;}
+      figure.imgfx h2 {
+        margin: 80px auto 10px;
+        font-family:'tm-b'; font-size: 24px; ;
+        text-transform: uppercase;
+      }
+      figure.imgfx:hover:after,
+      figure.imgfx.hover:after,
+      figure.imgfx:hover:before,
+      figure.imgfx.hover:before,
+      figure.imgfx:hover figcaption:after,
+      figure.imgfx.hover figcaption:after,
+      figure.imgfx:hover figcaption:before,
+      figure.imgfx.hover figcaption:before {
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+      }
+      figure.imgfx:hover figcaption h2{
+        opacity: 1; transition-delay: 0.3s;
+      }
+      figure.imgfx:hover figcaption p{
+        opacity: 0.7;transition-delay: 0.4s;
+      }
+
+    .second {
+        background:#f5f5f5;
+    }
+    .second h3, .third h3 {
+        width:260px; margin:0 auto; padding-top: 40px;  
+        font-size: 24px; line-height: 24px; color:#333; 
+        line-height: 22px; 
+    }
+    .second p, .third p {
+        margin:0 auto;  
+        font-size:14px; line-height:18px; color:#575757;
+    }
+    .second p {width:260px; margin-top:20px; padding-bottom: 40px;}
+
+    .third {
+        background:#e5e5e5;
+    }
+
+    .springCircle, .summerCircle, .autumnCircle, .winterCircle {
+        width:100%; height:300px; 
+    }
+    article .third >.springCircle {
+        background: url(../imgs/sub2-seasons_mobile-spring.jpg) center;
+        background-size: cover;
+    }
+    article .third >.summerCircle {
+        background: url(../imgs/sub2-seasons-mobile-summer.jpg)center;
+        background-size: cover;
+    }
+    article .third >.autumnCircle {
+        background: url(../imgs/sub2-seasons-mobile-autumn.jpg)center;
+        background-size: cover;
+    }
+    article .third >.winterCircle {
+        background:  url(../imgs/sub2-seasons-mobile-winter.jpg)center;
+        background-size: cover;
+    }
+    
+    .third .wrapper  {
+        width:260px; 
+        margin:0 auto; 
+    }
+    .third p { width:100%; margin-top:20px; padding-bottom: 40px;}   
+}
+
