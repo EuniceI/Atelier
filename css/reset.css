@@ -2,7 +2,7 @@
 /* ///// reset ///// */
 @font-face {
     font-family:gs-b;
-    src: url(../fonts/GmarketSansTTFBold.eot), url(../fonts/GmarketSansTTFBold.woff) format('woff');
+    src: url(../fonts/GmarketSansTTFBold.eot), url(../fonts/GmarketSansTTFBold.ttf) format('truetype');
 }
 @font-face {
     font-family:gs-l;
